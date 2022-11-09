@@ -1,58 +1,60 @@
 class Game {
-  constructor(gameInfo) {
-    console.log(gameInfo)
+  constructor() {
+    this.players = [player1, player2]
+    this.playerTurn = player1.token // "❎"
+    // console.log(this.playerTurn)
+
+    
+    // console.log(gameInfo)
   } 
-  
 }
 
 var player1 = new Player('❎', 0);
 var player2 = new Player('🅾️', 0);
+
 var game = new Game({ player1, player2 });
+// console.log(player1.token)
+console.log(game)
 
-// console.log(player1)
+// Option 1
+function switchTurn() {
+  if (game.playerTurn === player1.token) {
+    playerTurn = player2.token
+    console.log(`It's ${player2.token}'s turn`)
+  } else {
+    playerTurn = player1.token
+    console.log(`It's ${player1.token}'s turn`)
+  }
+}
+switchTurn()
+
+// Option 2
+// function switchTurn() {
+//   if (game.playerTurn === '❎') {
+//     playerTurn = player2.token
+//     console.log(playerTurn)
+//   } else {
+//     playerTurn = player1.token
+//     console.log(playerTurn)
+//   }
+// }
+// switchTurn()
+
+// Updates Turn 
+// function playersTurn() {
+//   if(player1.token === '❎') {
+//     console.log(`It's ❎'s turn`)
+//   } else {
+//     console.log(`It's 🅾️'s turn`)
+//   }
+// }
+// playersTurn()
 
 
-// var squareCliked = [];
-// console.log(squareCliked);
 
-// var squares = [
-//   {
-//     button: 1,
-//     clicked: true,
-//   },
-//   {
-//     button: 2,
-//     clicked: true,
-//   },
-//   {
-//     button: 3,
-//     clicked: true,
-//   },
-//   {
-//     button: 4,
-//     clicked: false,
-//   },
-//   {
-//     button: 5,
-//     clicked: false,
-//   },
-//   {
-//     button: 6,
-//     clicked: false,
-//   },
-//   {
-//     button: 7,
-//     clicked: false,
-//   },
-//   {
-//     button: 8,
-//     clicked: false,
-//   },
-//   {
-//     button: 9,
-//     clicked: false,
-//   },
-// ]
+
+
+
 
 
 // Pushes true to array
@@ -66,17 +68,6 @@ var game = new Game({ player1, player2 });
 
 // updateSquareClicked()
 // console.log(squareCliked);
-
-
-// Updates Turn 
-// function playersTurn() {
-//   if(player1.token === '❎') {
-//     console.log(`It's ❎'s turn`)
-//   } else {
-//     console.log(`It's 🅾️'s turn`)
-//   }
-// }
-// playersTurn()
 
 // Track wins
 // function updateWinCount() {
