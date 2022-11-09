@@ -2,10 +2,6 @@ class Game {
   constructor() {
     this.players = [player1, player2]
     this.playerTurn = player1.token // "❎"
-    // console.log(this.playerTurn)
-
-    
-    // console.log(gameInfo)
   } 
 }
 
@@ -13,74 +9,36 @@ var player1 = new Player('❎', 0);
 var player2 = new Player('🅾️', 0);
 
 var game = new Game({ player1, player2 });
-// console.log(player1.token)
 console.log(game)
 
-// Option 1
+// var buttons = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+var heading;
+// console.log(buttons)
+
+// Switches player turn
 function switchTurn() {
   if (game.playerTurn === player1.token) {
     playerTurn = player2.token
-    console.log(`It's ${player2.token}'s turn`)
+    console.log(heading = `It's ${player2.token}'s turn`)
   } else {
     playerTurn = player1.token
-    console.log(`It's ${player1.token}'s turn`)
+    console.log(heading = `It's ${player1.token}'s turn`)
   }
 }
 switchTurn()
 
-// Option 2
-// function switchTurn() {
-//   if (game.playerTurn === '❎') {
-//     playerTurn = player2.token
-//     console.log(playerTurn)
-//   } else {
-//     playerTurn = player1.token
-//     console.log(playerTurn)
-//   }
+// function displayToken() {
+
 // }
-// switchTurn()
+// var btn1 = document.querySelector("#button1");
 
-// Updates Turn 
-// function playersTurn() {
-//   if(player1.token === '❎') {
-//     console.log(`It's ❎'s turn`)
-//   } else {
-//     console.log(`It's 🅾️'s turn`)
-//   }
-// }
-// playersTurn()
+// btn1.addEventListener('click', function() {
+//   console.log('Btn 1 Clicked')
+// })
 
 
 
 
-
-
-
-
-// Pushes true to array
-// function updateSquareClicked() {
-//   for (var i = 0; i < squares.length; i++) {
-//     if(squares[i].clicked) {
-//       squareCliked.push(squares[i].button)
-//     }
-//   }
-// }
-
-// updateSquareClicked()
-// console.log(squareCliked);
-
-// Track wins
-// function updateWinCount() {
-//   for (var i = 0; i < squares.length; i++) {
-//     if(squares[0].clicked === true && squares[1].clicked === true && squares[2].clicked === true ) {
-//       console.log('Yes they match!')
-//     } else {
-//       // console.log("They don't match")
-//     }
-//   }
-// }
-
-// updateWinCount();
 
 
 
