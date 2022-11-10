@@ -44,28 +44,36 @@ var grid = document.querySelector('.grid-container')
 grid.addEventListener('click', myFunction)
 
 function myFunction(event) {
-  if(event.target.id === 'button1') {
+  if(event.target.id === 'button1' && buttons[0].innerText === '') {
     console.log(event.target.id)
-  } else if(event.target.id === 'button2') {
+    buttons[0].innerText = '❎'
+  } else if(event.target.id === 'button2' && buttons[1].innerText === '') {
     console.log(event.target.id)
-  } else if(event.target.id === 'button3') {
+    buttons[1].innerText = '❎'
+  } else if(event.target.id === 'button3' && buttons[2].innerText === '') {
     console.log(event.target.id)
-  } else if(event.target.id === 'button4') {
+    buttons[2].innerText = '❎'
+  } else if(event.target.id === 'button4' && buttons[3].innerText === '') {
     console.log(event.target.id)
-  } else if(event.target.id === 'button5') {
+    buttons[3].innerText = '❎'
+  } else if(event.target.id === 'button5' && buttons[4].innerText === '') {
     console.log(event.target.id)
-  } else if(event.target.id === 'button6') {
+    buttons[4].innerText = '❎'
+  } else if(event.target.id === 'button6' && buttons[5].innerText === '') {
     console.log(event.target.id)
-  } else if(event.target.id === 'button7') {
+    buttons[5].innerText = '❎'
+  } else if(event.target.id === 'button7' && buttons[6].innerText === '') {
     console.log(event.target.id)
-  } else if(event.target.id === 'button8') {
+    buttons[6].innerText = '❎'
+  } else if(event.target.id === 'button8' && buttons[7].innerText === '') {
     console.log(event.target.id)
-  } else if(event.target.id === 'button9') {
+    buttons[7].innerText = '❎'
+  } else if(event.target.id === 'button9' && buttons[8].innerText === '') {
     console.log(event.target.id)
+    buttons[8].innerText = '❎'
   }
-
 }
-myFunction()
+
 
 
 
