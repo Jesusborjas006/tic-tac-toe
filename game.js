@@ -25,14 +25,47 @@ function resetBoard() {
 }
 resetBoard()
 
-// function addToken() {
+// function addToken(event) {
 //   for (var i = 0; i < buttons.length; i++) {
 //     buttons[i].innerText = ''
 //     buttons[i].addEventListener('click', function() {
-//       console.log("cliked")
+//       alert(event.target.id)
+//       // if(buttons[0].id === 'button1') {
+//       //   console.log('Btn1 clicked')
+//       // } else if (buttons[1].id === 'button2') {
+//       //   console.log('Btn2 clicked')
+//       // }
 //     })
 //   }
 // }
+// addToken()
+
+var grid = document.querySelector('.grid-container')
+grid.addEventListener('click', myFunction)
+
+function myFunction(event) {
+  if(event.target.id === 'button1') {
+    console.log(event.target.id)
+  } else if(event.target.id === 'button2') {
+    console.log(event.target.id)
+  } else if(event.target.id === 'button3') {
+    console.log(event.target.id)
+  } else if(event.target.id === 'button4') {
+    console.log(event.target.id)
+  } else if(event.target.id === 'button5') {
+    console.log(event.target.id)
+  } else if(event.target.id === 'button6') {
+    console.log(event.target.id)
+  } else if(event.target.id === 'button7') {
+    console.log(event.target.id)
+  } else if(event.target.id === 'button8') {
+    console.log(event.target.id)
+  } else if(event.target.id === 'button9') {
+    console.log(event.target.id)
+  }
+
+}
+myFunction()
 
 
 
