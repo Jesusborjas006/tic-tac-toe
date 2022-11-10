@@ -5,36 +5,55 @@ class Game {
   } 
 }
 
-var player1 = new Player('❎', 0);
-var player2 = new Player('🅾️', 0);
+var player1 = new Player(1, '❎', 0);
+var player2 = new Player(2, '🅾️', 0);
 
 var game = new Game({ player1, player2 });
 console.log(game)
 
-// var buttons = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 var heading;
-// console.log(buttons)
+
+var buttons = document.querySelectorAll('.button');
+console.log(buttons)
+var btnClicked = []
+// console.log(btnClicked)
+
+function resetBoard() {
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].innerText = ''
+  }
+}
+resetBoard()
+
+// function addToken() {
+//   for (var i = 0; i < buttons.length; i++) {
+//     buttons[i].innerText = ''
+//     buttons[i].addEventListener('click', function() {
+//       console.log("cliked")
+//     })
+//   }
+// }
+
+
+
+
+
+
 
 // Switches player turn
 function switchTurn() {
   if (game.playerTurn === player1.token) {
     playerTurn = player2.token
     console.log(heading = `It's ${player2.token}'s turn`)
+    heading.innerText = `It's ${player2.token}'s turn`
   } else {
     playerTurn = player1.token
     console.log(heading = `It's ${player1.token}'s turn`)
+    heading = `It's ${player1.token}'s turn`
   }
 }
-switchTurn()
+// switchTurn()
 
-// function displayToken() {
-
-// }
-// var btn1 = document.querySelector("#button1");
-
-// btn1.addEventListener('click', function() {
-//   console.log('Btn 1 Clicked')
-// })
 
 
 
