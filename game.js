@@ -21,10 +21,9 @@ for (var i = 0; i < buttons.length; i++) {
     console.log(event.target)
     if(!btnClicked.includes(event.target.id)) {
       btnClicked.push(event.target.id)
-      addToken(game)
+      addToken()
       switchPlayer()
       console.log(btnClicked)
-      // return btnClicked
     } else {
       console.log("Already in array and token was already placed")
     }
@@ -35,34 +34,34 @@ console.log(btnClicked)
 
 
 // Adds token to board if not yet added
-function addToken(game) {
+function addToken() {
   if(btnClicked.includes('button1') && buttons[0].innerText === '') {
     console.log('Token Added')
-    buttons[0].innerText = game.players[0].token
+    buttons[0].innerText = currentPlayer
   } else if (btnClicked.includes('button2') && buttons[1].innerText === '') {
     console.log('Token Added')
-    buttons[1].innerText = game.players[0].token
+    buttons[1].innerText = currentPlayer
   } else if (btnClicked.includes('button3') && buttons[2].innerText === '') {
     console.log('Token Added')
-    buttons[2].innerText = game.players[0].token
+    buttons[2].innerText = currentPlayer
   } else if (btnClicked.includes('button4') && buttons[3].innerText === '') {
     console.log('Token Added')
-    buttons[3].innerText = game.players[0].token
+    buttons[3].innerText = currentPlayer
   } else if (btnClicked.includes('button5') && buttons[4].innerText === '') {
     console.log('Token Added')
-    buttons[4].innerText = game.players[0].token
+    buttons[4].innerText = currentPlayer
   } else if (btnClicked.includes('button6') && buttons[5].innerText === '') {
     console.log('Token Added')
-    buttons[5].innerText = game.players[0].token
+    buttons[5].innerText = currentPlayer
   } else if (btnClicked.includes('button7') && buttons[6].innerText === '') {
     console.log('Token Added')
-    buttons[6].innerText = game.players[0].token
+    buttons[6].innerText = currentPlayer
   } else if (btnClicked.includes('button8') && buttons[7].innerText === '') {
     console.log('Token Added')
-    buttons[7].innerText = game.players[0].token
+    buttons[7].innerText = currentPlayer
   } else if (btnClicked.includes('button9') && buttons[8].innerText === '') {
     console.log('Token Added')
-    buttons[8].innerText = game.players[0].token
+    buttons[8].innerText = currentPlayer
   } 
   
   
