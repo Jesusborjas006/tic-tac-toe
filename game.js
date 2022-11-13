@@ -34,15 +34,45 @@ for (var i = 0; i < buttons.length; i++) {
 console.log(btnClicked)
 
 
+// Adds token to board if not yet added
 function addToken(game) {
-  if(btnClicked.includes('button1')) {
+  if(btnClicked.includes('button1') && buttons[0].innerText === '') {
     console.log('Token Added')
     buttons[0].innerText = game.players[0].token
-  } else {
+  } else if (btnClicked.includes('button2') && buttons[1].innerText === '') {
+    console.log('Token Added')
+    buttons[1].innerText = game.players[0].token
+  } else if (btnClicked.includes('button3') && buttons[2].innerText === '') {
+    console.log('Token Added')
+    buttons[2].innerText = game.players[0].token
+  } else if (btnClicked.includes('button4') && buttons[3].innerText === '') {
+    console.log('Token Added')
+    buttons[3].innerText = game.players[0].token
+  } else if (btnClicked.includes('button5') && buttons[4].innerText === '') {
+    console.log('Token Added')
+    buttons[4].innerText = game.players[0].token
+  } else if (btnClicked.includes('button6') && buttons[5].innerText === '') {
+    console.log('Token Added')
+    buttons[5].innerText = game.players[0].token
+  } else if (btnClicked.includes('button7') && buttons[6].innerText === '') {
+    console.log('Token Added')
+    buttons[6].innerText = game.players[0].token
+  } else if (btnClicked.includes('button8') && buttons[7].innerText === '') {
+    console.log('Token Added')
+    buttons[7].innerText = game.players[0].token
+  } else if (btnClicked.includes('button9') && buttons[8].innerText === '') {
+    console.log('Token Added')
+    buttons[8].innerText = game.players[0].token
+  } 
+  
+  
+  
+  else {
     console.log('Not Yet Added!')
   }
 }
 
+// Swaps player turn when choosing a btn
 function switchPlayer() {
   if(currentPlayer === player1Token) {
     currentPlayer = player2Token 
@@ -53,20 +83,8 @@ function switchPlayer() {
     console.log(currentPlayer)
     console.log("Player has been switched")
   }
-  
 }
 
-
-
-// for (var i = 0; i < buttons.length; i++) {
-//   buttons[i].addEventListener('click', function(event) {
-//     if(!btnClicked.includes(event.target.id)) {
-  
-//     } else {
-//       console.log("Token already displayed")
-//     }
-//   })
-// }
 
 // Pseudocode 
 
