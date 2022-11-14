@@ -20,20 +20,27 @@ var winCount2 = 0;
 var winner;
 
 var combo1 = [buttons[0], buttons[1], buttons[2]];
-console.log(combo1)
+var combo2 = [buttons[3], buttons[4], buttons[5]];
+var combo3 = [buttons[6], buttons[7], buttons[8]];
+var combo4 = [buttons[0], buttons[3], buttons[6]];
+var combo5 = [buttons[1], buttons[4], buttons[7]];
+var combo6 = [buttons[2], buttons[5], buttons[8]];
+var combo7 = [buttons[0], buttons[4], buttons[8]];
+var combo8 = [buttons[2], buttons[4], buttons[6]]
+
 
 // How to know who the winner is?
 
 // Look for all the possible combinations for the board
 
-//  1,2,3
-//  4,5,6
-//  7,8,9
-//  1,4,7
-//  2,5,8
-//  3,6,9
-//  1,5,9
-//  3,5,7
+//  1,2,3 - done
+//  4,5,6 - done
+//  7,8,9 - done
+//  1,4,7 - done
+//  2,5,8 - done
+//  3,6,9 - done
+//  1,5,9 - done
+//  3,5,7 - done
 
 // If players token equals to all three numbers they win
 
@@ -82,27 +89,52 @@ function addToken() {
 function switchPlayer() {
   if(currentPlayer === player1Token) {
     currentPlayer = player2Token 
-    console.log(currentPlayer)
-    console.log("Player has been switched")
+    // console.log(currentPlayer)
   } else {
     currentPlayer = player1Token 
-    console.log(currentPlayer)
-    console.log("Player has been switched")
+    // console.log(currentPlayer)
   }
 }
+
+
 
 function declareWinner() {
-    if(combo1[0].innerText === '❎' && combo1[1].innerText === '❎' && combo1[2].innerText === '❎') {
-      console.log("We have a winner!")
-    } else {
-      console.log("No winner")
+  if(combo1[0].innerText === player1Token && combo1[1].innerText === player1Token && combo1[2].innerText === player1Token) {
+    console.log(`We have a winner! ${player1Token}`)
+  } else if(combo1[0].innerText === player2Token && combo1[1].innerText === player2Token && combo1[2].innerText === player2Token){
+    console.log(`We have a winner! ${player2Token}`)
+  } else if(combo2[0].innerText === player1Token && combo2[1].innerText === player1Token && combo2[2].innerText === player1Token) {
+    console.log(`We have a winner! ${player1Token}`)
+  } else if(combo2[0].innerText === player2Token && combo2[1].innerText === player2Token && combo2[2].innerText === player2Token){
+    console.log(`We have a winner! ${player2Token}`)
+  } else if(combo3[0].innerText === player1Token && combo3[1].innerText === player1Token && combo3[2].innerText === player1Token) {
+    console.log(`We have a winner! ${player1Token}`)
+  } else if(combo3[0].innerText === player2Token && combo3[1].innerText === player2Token && combo3[2].innerText === player2Token){
+    console.log(`We have a winner! ${player2Token}`)
+  } else if(combo4[0].innerText === player1Token && combo4[1].innerText === player1Token && combo4[2].innerText === player1Token) {
+    console.log(`We have a winner! ${player1Token}`)
+  } else if(combo4[0].innerText === player2Token && combo4[1].innerText === player2Token && combo4[2].innerText === player2Token){
+    console.log(`We have a winner! ${player2Token}`)
+  } else if(combo5[0].innerText === player1Token && combo5[1].innerText === player1Token && combo5[2].innerText === player1Token) {
+    console.log(`We have a winner! ${player1Token}`)
+  } else if(combo5[0].innerText === player2Token && combo5[1].innerText === player2Token && combo5[2].innerText === player2Token){
+    console.log(`We have a winner! ${player2Token}`)
+  } else if(combo6[0].innerText === player1Token && combo6[1].innerText === player1Token && combo6[2].innerText === player1Token) {
+    console.log(`We have a winner! ${player1Token}`)
+  } else if(combo6[0].innerText === player2Token && combo6[1].innerText === player2Token && combo6[2].innerText === player2Token){
+    console.log(`We have a winner! ${player2Token}`)
+  } else if(combo7[0].innerText === player1Token && combo7[1].innerText === player1Token && combo7[2].innerText === player1Token) {
+    console.log(`We have a winner! ${player1Token}`)
+  } else if(combo7[0].innerText === player2Token && combo7[1].innerText === player2Token && combo7[2].innerText === player2Token){
+    console.log(`We have a winner! ${player2Token}`)
+  } else if(combo8[0].innerText === player1Token && combo8[1].innerText === player1Token && combo8[2].innerText === player1Token) {
+    console.log(`We have a winner! ${player1Token}`)
+  } else if(combo8[0].innerText === player2Token && combo8[1].innerText === player2Token && combo8[2].innerText === player2Token){
+    console.log(`We have a winner! ${player2Token}`)
+  } else {
+    console.log("Its a draw")
   }
 }
-
-
-
-
-
 
 
 // Pseudocode 
