@@ -27,20 +27,6 @@ var combo6 = [buttons[2], buttons[5], buttons[8]];
 var combo7 = [buttons[0], buttons[4], buttons[8]];
 var combo8 = [buttons[2], buttons[4], buttons[6]]
 
-
-// How to know who the winner is?
-
-// Look for all the possible combinations for the board
-
-//  1,2,3 - done
-//  4,5,6 - done
-//  7,8,9 - done
-//  1,4,7 - done
-//  2,5,8 - done
-//  3,6,9 - done
-//  1,5,9 - done
-//  3,5,7 - done
-
 // Pushes the data into the btnClicked array if not there and add token
 for (var i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener('click', function(event) {
@@ -52,7 +38,7 @@ for (var i = 0; i < buttons.length; i++) {
       console.log(btnClicked)
       declareWinner()
     } else {
-      console.log("Already in array and token was already placed")
+      return
     }
   })
 }
@@ -85,10 +71,10 @@ function addToken() {
 function switchPlayer() {
   if(currentPlayer === player1Token) {
     currentPlayer = player2Token
-    mainHeading.innerText = `It's ${player2Token}'s turn`
+    mainHeading.innerText = `It's ${currentPlayer}'s turn`
   } else {
     currentPlayer = player1Token 
-    mainHeading.innerText = `It's ${player1Token}'s turn`
+    mainHeading.innerText = `It's ${currentPlayer}'s turn`
   }
 }
 
@@ -173,16 +159,26 @@ function declareWinner() {
     winCount2++;
     player2Score.innerText = `${winCount2} Wins`
     resetBoard()
+  } else if(btnClicked.length === 9){
+    draw()
+    resetBoard()
   }
 }
 
+function draw() {
+  mainHeading.innerText = `Draw`
+  console.log("Draw")
+}
+
 function resetBoard() {
-  btnClicked = [];
-  console.log(btnClicked)
-  console.log("Reset")
-  for(var i = 0; i < buttons.length; i++) {
-    buttons[i].innerText = ''
-  }
+  setTimeout(function () {
+    for(var i = 0; i < buttons.length; i++) {
+      btnClicked = [];
+      mainHeading.innerText = `It's ${currentPlayer}'s turn`
+      console.log("Delayed for 1 second.");
+      buttons[i].innerText = ''
+    }
+  }, 1000)
 }
 
 
