@@ -12,6 +12,7 @@ var mainHeading;
 var player1Token = player1.token
 var player2Token = player2.token
 var currentPlayer = player1Token
+var winner;
 var winCount1 = player1.wins
 var winCount2 = player2.wins
 var combo1 = [buttons[0], buttons[1], buttons[2]]
@@ -68,92 +69,95 @@ function switchPlayer() {
 
 function declareWinner() {
   if(combo1[0].innerText === player1Token && combo1[1].innerText === player1Token && combo1[2].innerText === player1Token) {
-    mainHeading.innerText = `${player1Token} Won!`
-    winCount1++;
-    player1Score.innerText = `${winCount1} Wins`
-    resetBoard()
+    winner = player1Token
+    addCount()
+    changeText()
   } else if(combo1[0].innerText === player2Token && combo1[1].innerText === player2Token && combo1[2].innerText === player2Token){
-      mainHeading.innerText = `${player2Token} Won!`
-      winCount2++;
-      player2Score.innerText = `${winCount2} Wins`
-      resetBoard()
+    winner = player2Token
+    addCount()
+    changeText()
   } else if(combo2[0].innerText === player1Token && combo2[1].innerText === player1Token && combo2[2].innerText === player1Token) {
-      mainHeading.innerText = `${player1Token} Won!`
-      winCount1++;
-      player1Score.innerText = `${winCount1} Wins`
-      resetBoard()
+    winner = player1Token
+    addCount()
+    changeText()
   } else if(combo2[0].innerText === player2Token && combo2[1].innerText === player2Token && combo2[2].innerText === player2Token){
-      mainHeading.innerText = `${player2Token} Won!`
-      winCount2++;
-      player2Score.innerText = `${winCount2} Wins`
-      resetBoard()
+    winner = player2Token
+    addCount()
+    changeText()
   } else if(combo3[0].innerText === player1Token && combo3[1].innerText === player1Token && combo3[2].innerText === player1Token) {
-      mainHeading.innerText = `${player1Token} Won!`
-      winCount1++;
-      player1Score.innerText = `${winCount1} Wins`
-      resetBoard()
+    winner = player1Token
+    addCount()
+    changeText()
   } else if(combo3[0].innerText === player2Token && combo3[1].innerText === player2Token && combo3[2].innerText === player2Token){
-      mainHeading.innerText = `${player2Token} Won!`
-      winCount2++;
-      player2Score.innerText = `${winCount2} Wins`
-      resetBoard()
+    winner = player2Token
+    addCount()
+    changeText()
   } else if(combo4[0].innerText === player1Token && combo4[1].innerText === player1Token && combo4[2].innerText === player1Token) {
-      mainHeading.innerText = `${player1Token} Won!`
-      winCount1++;
-      player1Score.innerText = `${winCount1} Wins`
-      resetBoard()
+    winner = player1Token
+    addCount()
+    changeText()
   } else if(combo4[0].innerText === player2Token && combo4[1].innerText === player2Token && combo4[2].innerText === player2Token){
-      mainHeading.innerText = `${player2Token} Won!`
-      winCount2++;
-      player2Score.innerText = `${winCount2} Wins`
-      resetBoard()
+    winner = player2Token
+    addCount()
+    changeText()
   } else if(combo5[0].innerText === player1Token && combo5[1].innerText === player1Token && combo5[2].innerText === player1Token) {
-      mainHeading.innerText = `${player1Token} Won!`
-      winCount1++;
-      player1Score.innerText = `${winCount1} Wins`
-      resetBoard()
+    winner = player1Token
+    addCount()
+    changeText()
   } else if(combo5[0].innerText === player2Token && combo5[1].innerText === player2Token && combo5[2].innerText === player2Token){
-      mainHeading.innerText = `${player2Token} Won!`
-      winCount2++;
-      player2Score.innerText = `${winCount2} Wins`
-      resetBoard()
+    winner = player2Token
+    addCount()
+    changeText()
   } else if(combo6[0].innerText === player1Token && combo6[1].innerText === player1Token && combo6[2].innerText === player1Token) {
-      mainHeading.innerText = `${player1Token} Won!`
-      winCount1++;
-      player1Score.innerText = `${winCount1} Wins`
-      resetBoard()
+    winner = player1Token
+    addCount()
+    changeText()
   } else if(combo6[0].innerText === player2Token && combo6[1].innerText === player2Token && combo6[2].innerText === player2Token){
-      mainHeading.innerText = `${player2Token} Won!`
-      winCount2++;
-      player2Score.innerText = `${winCount2} Wins`
-      resetBoard()
+    winner = player2Token
+    addCount()
+    changeText()
   } else if(combo7[0].innerText === player1Token && combo7[1].innerText === player1Token && combo7[2].innerText === player1Token) {
-      mainHeading.innerText = `${player1Token} Won!`
-      winCount1++;
-      player1Score.innerText = `${winCount1} Wins`
-      resetBoard()
+    winner = player1Token
+    addCount()
+    changeText()
   } else if(combo7[0].innerText === player2Token && combo7[1].innerText === player2Token && combo7[2].innerText === player2Token){
-      mainHeading.innerText = `${player2Token} Won!`
-      winCount2++;
-      player2Score.innerText = `${winCount2} Wins`
-      resetBoard()
+    winner = player2Token
+    addCount()
+    changeText()
   } else if(combo8[0].innerText === player1Token && combo8[1].innerText === player1Token && combo8[2].innerText === player1Token) {
-      mainHeading.innerText = `${player1Token} Won!`
-      winCount1++;
-      player1Score.innerText = `${winCount1} Wins`
-      resetBoard()
+    winner = player1Token
+    addCount()
+    changeText()
   } else if(combo8[0].innerText === player2Token && combo8[1].innerText === player2Token && combo8[2].innerText === player2Token){
-      mainHeading.innerText = `${player2Token} Won!`
-      winCount2++;
-      player2Score.innerText = `${winCount2} Wins`
-      resetBoard()
+    winner = player2Token
+    addCount()
+    changeText()
   } else if(btnClicked.length === 9){
-      draw()
-      resetBoard()
+    draw()
+  }
+}
+
+function addCount() {
+  resetBoard()
+  if(winner === player1Token) {
+    winCount1++
+  } else {
+    winCount2++
+  }
+}
+
+function changeText() {
+  if(winner === player1Token) {
+    player1Score.innerText = `${winCount1} Wins`
+    mainHeading.innerText = `${player1Token} Won!`
+  } else {
+    player2Score.innerText = `${winCount2} Wins`
+    mainHeading.innerText = `${player2Token} Won!`
   }
 }
 
 function draw() {
+  resetBoard()
   btnClicked = [];
   mainHeading.innerText = 'Draw'
 }
@@ -167,6 +171,26 @@ function resetBoard() {
     }
   }, 1000)
 }
+
+
+
+// function disableButton() {
+//   for(var i = 0; i < buttons.length; i++) {
+//     if(winner === player1Token || winner === player2Token) {
+//       buttons[i].disabled = true
+//     } 
+//   }
+// }
+
+// function clickAgain() {
+//   for(var i = 0; i < buttons.length; i++) {
+//   buttons[i].disabled = false;
+//   }
+// }
+
+
+ 
+
 
 
 
