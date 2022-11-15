@@ -3,7 +3,7 @@ var token2 = document.querySelector(".player-2-token");
 var player1Score = document.querySelector("#winCount1");
 var player2Score = document.querySelector("#winCount2");
 var mainHeading = document.querySelector(".main-heading");
-// var buttons = document.querySelectorAll('.button')
+var resetButton = document.querySelector(".reset-button")
 
 for (var i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener('click', function(event) {
@@ -16,6 +16,8 @@ for (var i = 0; i < buttons.length; i++) {
     } 
   })
 }
+
+resetButton.addEventListener('click', resetGame)
 
 function addToken() {
   if(btnClicked.includes('button1') && buttons[0].innerText === '') {
@@ -80,4 +82,17 @@ function resetBoard() {
       buttons[i].disabled = false;
     }
   }, 1000)
+}
+
+function resetGame() {
+  winCount1 = 0
+  winCount2 = 0
+  player1Score.innerText = `${winCount1} Wins`
+  player2Score.innerText = `${winCount2} Wins`
+  btnClicked = [];
+  for(var i = 0; i < buttons.length; i++) {
+    mainHeading.innerText = `It's ${currentPlayer}'s turn`
+    buttons[i].innerText = ''
+    buttons[i].disabled = false;
+  }
 }
