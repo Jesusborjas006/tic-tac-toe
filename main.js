@@ -9,7 +9,6 @@ for (var i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener('click', function(event) {
     if(!btnClicked.includes(event.target.id)) {
       btnClicked.push(event.target.id)
-      console.log("CLick")
       addToken()
       switchPlayer()
       switchPlayerHeading()
