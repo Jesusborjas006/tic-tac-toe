@@ -2,6 +2,7 @@
 
 ### Abstract: 
 This is an app to be able to play one of the most common games "Tic Tac Toe". 
+
 The Features Include: 
 - A heading which displays both the turn of the player and the winner/draw.
 - A grid made up of buttons in order to click on the squares.
@@ -16,7 +17,7 @@ The Features Include:
 4. On your terminal, `open index.html`
 
 ### Preview of App:
-
+<img width="1440" alt="tic-tac-toe-screenshot" src="https://user-images.githubusercontent.com/111095858/202041311-7f5b7850-65d4-493a-bd0b-31ff4cc4fa1b.png">
 
 ### Context:
 I had a bit over a week to work on this project. I Worked about 3-4 hours a day to get the site functional. This is the final project for mod 1.
@@ -30,3 +31,4 @@ I had a bit over a week to work on this project. I Worked about 3-4 hours a day 
 - Understand the difference between the data model and how the data is displayed on the DOM
 - Iterate through/filter DOM elements using for loops
 - Use your problem solving process to break down large problems, solve things step by step, and trust yourself to not rely on an outside “answer” to a logical challenge
+
