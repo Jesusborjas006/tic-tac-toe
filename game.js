@@ -15,6 +15,18 @@ var game = new Game({ player1, player2 });
 var buttons = document.querySelectorAll('.button');
 var btnClicked = []
 
+var winCount1 = 0;
+var winCount2 = 0;
+
+var combo1 = [buttons[0], buttons[1], buttons[2]];
+var combo2 = [buttons[3], buttons[4], buttons[5]];
+var combo3 = [buttons[6], buttons[7], buttons[8]];
+var combo4 = [buttons[0], buttons[3], buttons[6]];
+var combo5 = [buttons[1], buttons[4], buttons[7]];
+var combo6 = [buttons[2], buttons[5], buttons[8]];
+var combo7 = [buttons[0], buttons[4], buttons[8]];
+var combo8 = [buttons[2], buttons[4], buttons[6]]
+
 // Pushes the data into the btnClicked array if not there and add token
 for (var i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener('click', function(event) {
@@ -24,79 +36,150 @@ for (var i = 0; i < buttons.length; i++) {
       addToken()
       switchPlayer()
       console.log(btnClicked)
+      declareWinner()
     } else {
-      console.log("Already in array and token was already placed")
+      return
     }
   })
 }
 
-console.log(btnClicked)
-
-
 // Adds token to board if not yet added
 function addToken() {
   if(btnClicked.includes('button1') && buttons[0].innerText === '') {
-    console.log('Token Added')
     buttons[0].innerText = currentPlayer
   } else if (btnClicked.includes('button2') && buttons[1].innerText === '') {
-    console.log('Token Added')
     buttons[1].innerText = currentPlayer
   } else if (btnClicked.includes('button3') && buttons[2].innerText === '') {
-    console.log('Token Added')
     buttons[2].innerText = currentPlayer
   } else if (btnClicked.includes('button4') && buttons[3].innerText === '') {
-    console.log('Token Added')
     buttons[3].innerText = currentPlayer
   } else if (btnClicked.includes('button5') && buttons[4].innerText === '') {
-    console.log('Token Added')
     buttons[4].innerText = currentPlayer
   } else if (btnClicked.includes('button6') && buttons[5].innerText === '') {
-    console.log('Token Added')
     buttons[5].innerText = currentPlayer
   } else if (btnClicked.includes('button7') && buttons[6].innerText === '') {
-    console.log('Token Added')
     buttons[6].innerText = currentPlayer
   } else if (btnClicked.includes('button8') && buttons[7].innerText === '') {
-    console.log('Token Added')
     buttons[7].innerText = currentPlayer
   } else if (btnClicked.includes('button9') && buttons[8].innerText === '') {
-    console.log('Token Added')
     buttons[8].innerText = currentPlayer
-  } 
-  
-  
-  
-  else {
+  } else {
     console.log('Not Yet Added!')
   }
 }
-
 // Swaps player turn when choosing a btn
 function switchPlayer() {
   if(currentPlayer === player1Token) {
-    currentPlayer = player2Token 
-    console.log(currentPlayer)
-    console.log("Player has been switched")
+    currentPlayer = player2Token
+    mainHeading.innerText = `It's ${currentPlayer}'s turn`
   } else {
     currentPlayer = player1Token 
-    console.log(currentPlayer)
-    console.log("Player has been switched")
+    mainHeading.innerText = `It's ${currentPlayer}'s turn`
   }
 }
 
+function declareWinner() {
+  if(combo1[0].innerText === player1Token && combo1[1].innerText === player1Token && combo1[2].innerText === player1Token) {
+    mainHeading.innerText = `${player1Token} Won!`
+    winCount1++;
+    player1Score.innerText = `${winCount1} Wins`
+    resetBoard()
+  } else if(combo1[0].innerText === player2Token && combo1[1].innerText === player2Token && combo1[2].innerText === player2Token){
+    mainHeading.innerText = `${player2Token} Won!`
+    winCount2++;
+    player2Score.innerText = `${winCount2} Wins`
+    resetBoard()
+  } else if(combo2[0].innerText === player1Token && combo2[1].innerText === player1Token && combo2[2].innerText === player1Token) {
+    mainHeading.innerText = `${player1Token} Won!`
+    winCount1++;
+    player1Score.innerText = `${winCount1} Wins`
+    resetBoard()
+  } else if(combo2[0].innerText === player2Token && combo2[1].innerText === player2Token && combo2[2].innerText === player2Token){
+    mainHeading.innerText = `${player2Token} Won!`
+    winCount2++;
+    player2Score.innerText = `${winCount2} Wins`
+    resetBoard()
+  } else if(combo3[0].innerText === player1Token && combo3[1].innerText === player1Token && combo3[2].innerText === player1Token) {
+    mainHeading.innerText = `${player1Token} Won!`
+    winCount1++;
+    player1Score.innerText = `${winCount1} Wins`
+    resetBoard()
+  } else if(combo3[0].innerText === player2Token && combo3[1].innerText === player2Token && combo3[2].innerText === player2Token){
+    mainHeading.innerText = `${player2Token} Won!`
+    winCount2++;
+    player2Score.innerText = `${winCount2} Wins`
+    resetBoard()
+  } else if(combo4[0].innerText === player1Token && combo4[1].innerText === player1Token && combo4[2].innerText === player1Token) {
+    mainHeading.innerText = `${player1Token} Won!`
+    winCount1++;
+    player1Score.innerText = `${winCount1} Wins`
+    resetBoard()
+  } else if(combo4[0].innerText === player2Token && combo4[1].innerText === player2Token && combo4[2].innerText === player2Token){
+    mainHeading.innerText = `${player2Token} Won!`
+    winCount2++;
+    player2Score.innerText = `${winCount2} Wins`
+    resetBoard()
+  } else if(combo5[0].innerText === player1Token && combo5[1].innerText === player1Token && combo5[2].innerText === player1Token) {
+    mainHeading.innerText = `${player1Token} Won!`
+    winCount1++;
+    player1Score.innerText = `${winCount1} Wins`
+    resetBoard()
+  } else if(combo5[0].innerText === player2Token && combo5[1].innerText === player2Token && combo5[2].innerText === player2Token){
+    mainHeading.innerText = `${player2Token} Won!`
+    winCount2++;
+    player2Score.innerText = `${winCount2} Wins`
+    resetBoard()
+  } else if(combo6[0].innerText === player1Token && combo6[1].innerText === player1Token && combo6[2].innerText === player1Token) {
+    mainHeading.innerText = `${player1Token} Won!`
+    winCount1++;
+    player1Score.innerText = `${winCount1} Wins`
+    resetBoard()
+  } else if(combo6[0].innerText === player2Token && combo6[1].innerText === player2Token && combo6[2].innerText === player2Token){
+    mainHeading.innerText = `${player2Token} Won!`
+    winCount2++;
+    player2Score.innerText = `${winCount2} Wins`
+    resetBoard()
+  } else if(combo7[0].innerText === player1Token && combo7[1].innerText === player1Token && combo7[2].innerText === player1Token) {
+    mainHeading.innerText = `${player1Token} Won!`
+    winCount1++;
+    player1Score.innerText = `${winCount1} Wins`
+    resetBoard()
+  } else if(combo7[0].innerText === player2Token && combo7[1].innerText === player2Token && combo7[2].innerText === player2Token){
+    mainHeading.innerText = `${player2Token} Won!`
+    winCount2++;
+    player2Score.innerText = `${winCount2} Wins`
+    resetBoard()
+  } else if(combo8[0].innerText === player1Token && combo8[1].innerText === player1Token && combo8[2].innerText === player1Token) {
+    mainHeading.innerText = `${player1Token} Won!`
+    winCount1++;
+    player1Score.innerText = `${winCount1} Wins`
+    resetBoard()
+  } else if(combo8[0].innerText === player2Token && combo8[1].innerText === player2Token && combo8[2].innerText === player2Token){
+    mainHeading.innerText = `${player2Token} Won!`
+    winCount2++;
+    player2Score.innerText = `${winCount2} Wins`
+    resetBoard()
+  } else if(btnClicked.length === 9){
+    draw()
+    resetBoard()
+  }
+}
 
-// Pseudocode 
+function draw() {
+  mainHeading.innerText = `Draw`
+  console.log("Draw")
+}
 
-//  1. Create a global variable to track the wins for a player
-//  2. Make the heading dynamic to display the players turn 
-//  3. Create variables for when the button is clicked to show which token clicked it (Boolean)
-//  4. If no player wins say "It's a draw" else display winner
-//  5. Add 1 point to counter of player if won
-//  6. Change players turn when game is over 
-
-
-// Create all global varibales ()
-
+function resetBoard() {
+  setTimeout(function () {
+    for(var i = 0; i < buttons.length; i++) {
+      btnClicked = [];
+      mainHeading.innerText = `It's ${currentPlayer}'s turn`
+      console.log("Delayed for 1 second.");
+      buttons[i].innerText = ''
+    }
+  }, 1000)
+}
 
 
 
