@@ -11,7 +11,7 @@
   color: white;
 }
 
-/* Sides */
+/* Player Side Content */
 .player-1-container,
 .player-2-container {
   background-color: #46B2E0;
@@ -27,7 +27,7 @@
   margin: 50px 0 10px 0;
 }
 
-/* Middle */
+/* Game Content */
 .game-container {
   background-color: #03203C;
   width: 50vw;
