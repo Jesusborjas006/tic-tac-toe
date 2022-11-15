@@ -72,68 +72,85 @@ function declareWinner() {
     winner = player1Token
     addCount()
     changeText()
+    disableButton()
   } else if(combo1[0].innerText === player2Token && combo1[1].innerText === player2Token && combo1[2].innerText === player2Token){
     winner = player2Token
     addCount()
     changeText()
+    disableButton()
   } else if(combo2[0].innerText === player1Token && combo2[1].innerText === player1Token && combo2[2].innerText === player1Token) {
     winner = player1Token
     addCount()
     changeText()
+    disableButton()
   } else if(combo2[0].innerText === player2Token && combo2[1].innerText === player2Token && combo2[2].innerText === player2Token){
     winner = player2Token
     addCount()
     changeText()
+    disableButton()
   } else if(combo3[0].innerText === player1Token && combo3[1].innerText === player1Token && combo3[2].innerText === player1Token) {
     winner = player1Token
     addCount()
     changeText()
+    disableButton()
   } else if(combo3[0].innerText === player2Token && combo3[1].innerText === player2Token && combo3[2].innerText === player2Token){
     winner = player2Token
     addCount()
     changeText()
+    disableButton()
   } else if(combo4[0].innerText === player1Token && combo4[1].innerText === player1Token && combo4[2].innerText === player1Token) {
     winner = player1Token
     addCount()
     changeText()
+    disableButton()
   } else if(combo4[0].innerText === player2Token && combo4[1].innerText === player2Token && combo4[2].innerText === player2Token){
     winner = player2Token
     addCount()
     changeText()
+    disableButton()
   } else if(combo5[0].innerText === player1Token && combo5[1].innerText === player1Token && combo5[2].innerText === player1Token) {
     winner = player1Token
     addCount()
     changeText()
+    disableButton()
   } else if(combo5[0].innerText === player2Token && combo5[1].innerText === player2Token && combo5[2].innerText === player2Token){
     winner = player2Token
     addCount()
     changeText()
+    disableButton()
   } else if(combo6[0].innerText === player1Token && combo6[1].innerText === player1Token && combo6[2].innerText === player1Token) {
     winner = player1Token
     addCount()
     changeText()
+    disableButton()
   } else if(combo6[0].innerText === player2Token && combo6[1].innerText === player2Token && combo6[2].innerText === player2Token){
     winner = player2Token
     addCount()
     changeText()
+    disableButton()
   } else if(combo7[0].innerText === player1Token && combo7[1].innerText === player1Token && combo7[2].innerText === player1Token) {
     winner = player1Token
     addCount()
     changeText()
+    disableButton()
   } else if(combo7[0].innerText === player2Token && combo7[1].innerText === player2Token && combo7[2].innerText === player2Token){
     winner = player2Token
     addCount()
     changeText()
+    disableButton()
   } else if(combo8[0].innerText === player1Token && combo8[1].innerText === player1Token && combo8[2].innerText === player1Token) {
     winner = player1Token
     addCount()
     changeText()
+    disableButton()
   } else if(combo8[0].innerText === player2Token && combo8[1].innerText === player2Token && combo8[2].innerText === player2Token){
     winner = player2Token
     addCount()
     changeText()
+    disableButton()
   } else if(btnClicked.length === 9){
     draw()
+    disableButton()
   }
 }
 
@@ -162,31 +179,23 @@ function draw() {
   mainHeading.innerText = 'Draw'
 }
 
+function disableButton() {
+  for(var i = 0; i < buttons.length; i++) {
+    buttons[i].disabled = true;
+  }
+}
+
 function resetBoard() {
   setTimeout(function () {
     for(var i = 0; i < buttons.length; i++) {
       btnClicked = [];
       mainHeading.innerText = `It's ${currentPlayer}'s turn`
       buttons[i].innerText = ''
+      buttons[i].disabled = false;
     }
   }, 1000)
 }
 
-
-
-// function disableButton() {
-//   for(var i = 0; i < buttons.length; i++) {
-//     if(winner === player1Token || winner === player2Token) {
-//       buttons[i].disabled = true
-//     } 
-//   }
-// }
-
-// function clickAgain() {
-//   for(var i = 0; i < buttons.length; i++) {
-//   buttons[i].disabled = false;
-//   }
-// }
 
 
  
