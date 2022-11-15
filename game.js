@@ -42,9 +42,6 @@ var combo8 = [buttons[2], buttons[4], buttons[6]]
 //  1,5,9 - done
 //  3,5,7 - done
 
-// If players token equals to all three numbers they win
-
-
 // Pushes the data into the btnClicked array if not there and add token
 for (var i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener('click', function(event) {
@@ -88,15 +85,13 @@ function addToken() {
 // Swaps player turn when choosing a btn
 function switchPlayer() {
   if(currentPlayer === player1Token) {
-    currentPlayer = player2Token 
-    // console.log(currentPlayer)
+    currentPlayer = player2Token
+    mainHeading.innerText = `It's ${player2Token}'s turn`
   } else {
     currentPlayer = player1Token 
-    // console.log(currentPlayer)
+    mainHeading.innerText = `It's ${player1Token}'s turn`
   }
 }
-
-
 
 function declareWinner() {
   if(combo1[0].innerText === player1Token && combo1[1].innerText === player1Token && combo1[2].innerText === player1Token) {
@@ -135,20 +130,6 @@ function declareWinner() {
     console.log("Its a draw")
   }
 }
-
-
-// Pseudocode 
-
-//  1. Create a global variable to track the wins for a player
-//  2. Make the heading dynamic to display the players turn 
-//  3. Create variables for when the button is clicked to show which token clicked it (Boolean)
-//  4. If no player wins say "It's a draw" else display winner
-//  5. Add 1 point to counter of player if won
-//  6. Change players turn when game is over 
-
-
-// Create all global varibales ()
-
 
 
 
