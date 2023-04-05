@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Tic Tac Toe</title>
-</head>
-<body>
-  <main class="main-container">
-    <section class="player-1-container">
-      <h3 class="player-1-token">❎</h3>
-      <p id="winCount1">0 Wins</p>
-    </section>
-    <section class="game-container">
-      <h1 class="main-heading">It's ❎'s turn</h1>
-      <div class="grid-container">
-        <button class="button" id="button1"></button>
-        <button class="button" id="button2"></button>
-        <button class="button" id="button3"></button>
-        <button class="button" id="button4"></button>
-        <button class="button" id="button5"></button>
-        <button class="button" id="button6"></button>
-        <button class="button" id="button7"></button>
-        <button class="button" id="button8"></button>
-        <button class="button" id="button9"></button>
-    </div>
-    <button class="reset-button">Reset game</button>
-    </section>
-    <section class="player-2-container">
-      <h3 class="player-2-token">🅾️</h3>
-      <p id="winCount2">0 Wins</p>
-    </section>
-  </main>
-  <script src="./player.js"></script>
-  <script src="./game.js"></script>
-  <script src="./main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="media-query.css" />
+    <title>Tic Tac Toe</title>
+  </head>
+  <body>
+    <main class="main-container">
+      <section class="player-1-container">
+        <h3 class="player-1-token">❎</h3>
+        <p id="winCount1">0 Wins</p>
+      </section>
+      <section class="game-container">
+        <h1 class="main-heading">It's ❎'s turn</h1>
+        <div class="grid-container">
+          <button class="button" id="button1"></button>
+          <button class="button" id="button2"></button>
+          <button class="button" id="button3"></button>
+          <button class="button" id="button4"></button>
+          <button class="button" id="button5"></button>
+          <button class="button" id="button6"></button>
+          <button class="button" id="button7"></button>
+          <button class="button" id="button8"></button>
+          <button class="button" id="button9"></button>
+        </div>
+        <button class="reset-button">Reset game</button>
+      </section>
+      <section class="player-2-container">
+        <h3 class="player-2-token">🅾️</h3>
+        <p id="winCount2">0 Wins</p>
+      </section>
+    </main>
+    <script src="./player.js"></script>
+    <script src="./game.js"></script>
+    <script src="./main.js"></script>
+  </body>
 </html>
