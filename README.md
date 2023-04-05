@@ -10,6 +10,7 @@ The Features Include:
 - A grid made up of buttons in order to click on the squares.
 - Shows the score of both players
 - Ability to reset the game
+- Responsive across multiple devices
 
 
 ### Installation Instructions:
